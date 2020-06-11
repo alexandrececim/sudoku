@@ -8,19 +8,30 @@
 
         public function preencherCampo($grade){
             $quadrante = [];
+            $contaGrade = 0;
+            echo "<table  class='table'>";
+            echo "<table>";
             foreach ($grade as $linha => $value) {
                 foreach($value as $coluna){
-                   
-                    echo "<table  class='table'>";
-
-                    echo "<tr class='status'>"."<td> ".$coluna['C1']." </td><td> ".$coluna['C2']." </td><td> ".$coluna['C3'].
-                        " </td><td> ".$coluna['C4']." </td><td> ".$coluna['C5']." </td><td> ".$coluna['C6'].
-                        " </td><td> ".$coluna['C7']." </td><td> ".$coluna['C8']." </td><td> ".$coluna['C9']."</td></tr>"; 
-                    echo "</table>";                   
+                    
+                    $contaGrade++;                    
+                    echo "<tr class='status'>"."<td> <input type='text' 
+                                                    value='".$coluna['C1']."' id='L".$contaGrade."C1' maxlength='1' class='grade'/></td>
+                            <td> <input type='text' value='".$coluna['C2']."' id='L".$contaGrade."C2' maxlength='1' class='grade'/></td>
+                            <td> <input type='text' value='".$coluna['C3']."' id='L".$contaGrade."C3' maxlength='1' class='grade'/></td>
+                            <td> <input type='text' value='".$coluna['C4']."' id='L".$contaGrade."C4' maxlength='1' class='grade'/></td>
+                            <td> <input type='text' value='".$coluna['C5']."' id='L".$contaGrade."C5' maxlength='1' class='grade'/></td>
+                            <td> <input type='text' value='".$coluna['C6']."' id='L".$contaGrade."C6' maxlength='1' class='grade'/></td>
+                            <td> <input type='text' value='".$coluna['C7']."' id='L".$contaGrade."C7' maxlength='1' class='grade'/></td>
+                            <td> <input type='text' value='".$coluna['C8']."' id='L".$contaGrade."C8' maxlength='1' class='grade'/></td>
+                            <td> <input type='text' value='".$coluna['C9']."' id='L".$contaGrade."C9' maxlength='1' class='grade'/></td>
+                            </tr> "; 
+                                      
                 }            
                 
             }
-            return null;
+            echo "</table>"; 
+            
         }
     }
     

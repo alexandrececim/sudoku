@@ -30,30 +30,29 @@
  */
     class Sudoku {
         
-        function __construct()
+        function __construct($grade)
         {
             $matriz_9x9 = new Matriz_9x9("9");
             
-            $grade = $matriz_9x9->getGrade();
-            $matriz_original = $matriz_9x9->getGrade();
+            $matriz_original = $grade;
             
             $contador = 0;
 
             do{
                $grade = $this->persistencia($matriz_original ,$matriz_9x9);
                 $contador++;
-                if($contador == 810){
-                    echo "Ciclos limite atingido, tente novamente !";
+                if($contador == 5000){
+                    echo "<p style='color:yellow'>Ciclos limite atingido, tente novamente ou verifique os numeros.</p>";
                     break;
                 } 
             } while($this->valida($grade) != 405);
 
-            echo "*Quantidade de ciclos:[ ".$contador." ]<br>";
+            echo "*Quantidade de ciclos: [ ".$contador." ]<br>";
             $this->preencherCampo($grade);
-            //echo json_encode($grade);
            
         }
 
+       
         public function persistencia($grade ,$matriz_9x9){
             $grade = $this->plotar($grade, 0, $matriz_9x9);
             $grade = $this->plotar($grade, 1, $matriz_9x9);
@@ -67,6 +66,7 @@
             return $grade;
         }
 
+
         public function valida($grade){
             $total = [];
             foreach ($grade as $linha => $value) {
@@ -78,13 +78,16 @@
             }
             return array_sum($total);
         }
+
+
+
         public function gravarGrade($grade, $linha, $colunaN, $matriz_9x9, $arrayNumeros){
             $matriz_3x3 = new Matriz_3x3(); 
             $arrayNumeros = array("1", "2", "3", "4", "5", "6", "7", "8", "9"); 
             //Regra (1) do Sudoku: não repetir numeração da linha da 'Grade'
             $linhaCarregada =  $matriz_9x9->consultaLinha($grade, $linha);
 
-            if($linha > 0){
+            
             //Regra (2) do Sudoku: não repetir numeração da coluna da 'Grade'
             $coluna = $matriz_9x9->consultaColuna($grade, $colunaN);
 
@@ -103,12 +106,8 @@
                    // echo "<br>-> Sobra: ".print_r($sobra)."  (Coluna: $colunaN)<br>";
                 }
 
-            }
-            //Para a 'linha 0' a regra limita-se a pesquisar a linha
-            else{
-                $sobra = array_diff($arrayNumeros, $linhaCarregada);
-                
-            }
+          
+           
             //embaralha os valores remanescentes
             shuffle($sobra);
             
@@ -131,7 +130,7 @@
 
         
         public function plotar($grade, $linha, $matriz_9x9){
-            $arrayNumeros = array("1", "2", "3", "4", "5", "6", "7", "8", "9");
+            $arrayNumeros = [];//array("1", "2", "3", "4", "5", "6", "7", "8", "9");
             shuffle($arrayNumeros);   
             $conta = 0;
             
@@ -256,22 +255,32 @@
             } 
             return $grade_usada;
         }
-
+        
         public function preencherCampo($grade){
             $quadrante = [];
+            $contaGrade = 0;
+            echo "<table>";
             foreach ($grade as $linha => $value) {
                 foreach($value as $coluna){
                     
-                    echo "<table  class='table'>";
+                    $contaGrade++;
+                    echo "<tr class='status'>"."<td> <input type='text' 
+                                                    value='".$coluna['C1']."' id='L".$contaGrade."C1' maxlength='1' class='grade'/></td>
+                            <td> <input type='text' value='".$coluna['C2']."' id='L".$contaGrade."C2' maxlength='1' class='grade'/></td>
+                            <td> <input type='text' value='".$coluna['C3']."' id='L".$contaGrade."C3' maxlength='1' class='grade'/></td>
+                            <td> <input type='text' value='".$coluna['C4']."' id='L".$contaGrade."C4' maxlength='1' class='grade'/></td>
+                            <td> <input type='text' value='".$coluna['C5']."' id='L".$contaGrade."C5' maxlength='1' class='grade'/></td>
+                            <td> <input type='text' value='".$coluna['C6']."' id='L".$contaGrade."C6' maxlength='1' class='grade'/></td>
+                            <td> <input type='text' value='".$coluna['C7']."' id='L".$contaGrade."C7' maxlength='1' class='grade'/></td>
+                            <td> <input type='text' value='".$coluna['C8']."' id='L".$contaGrade."C8' maxlength='1' class='grade'/></td>
+                            <td> <input type='text' value='".$coluna['C9']."' id='L".$contaGrade."C9' maxlength='1' class='grade'/></td>
+                            </tr> ";  
 
-                    echo "<tr class='status'>"."<td> ".$coluna['C1']." </td><td> ".$coluna['C2']." </td><td> ".$coluna['C3'].
-                        " </td><td> ".$coluna['C4']." </td><td> ".$coluna['C5']." </td><td> ".$coluna['C6'].
-                        " </td><td> ".$coluna['C7']." </td><td> ".$coluna['C8']." </td><td> ".$coluna['C9']."</td></tr>"; 
-                    echo "</table>";   
-                }              
+                                      
+                }            
                 
             }
-            
-            return null;
+            echo "</table>"; 
         }
+        
     }

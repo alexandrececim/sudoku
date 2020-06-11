@@ -13,32 +13,32 @@
         function __construct()
         {
             ///*
-            $gradeColuna = array('C1'=>"0",'C2'=>"0", 'C3'=>"0", 'C4'=>"0",'C5'=>"0", 'C6'=>"0", 'C7'=>"0",'C8'=>"0", 'C9'=>"0");
+            $gradeColuna = array('C1'=>"",'C2'=>"", 'C3'=>"", 'C4'=>"",'C5'=>"", 'C6'=>"", 'C7'=>"",'C8'=>"", 'C9'=>"");
             $gradeLinha_1  = array($gradeColuna);
 
-            $gradeColuna = array('C1'=>"0",'C2'=>"0", 'C3'=>"0", 'C4'=>"0",'C5'=>"0", 'C6'=>"0", 'C7'=>"0",'C8'=>"0", 'C9'=>"0");
+            $gradeColuna = array('C1'=>"",'C2'=>"", 'C3'=>"", 'C4'=>"",'C5'=>"", 'C6'=>"", 'C7'=>"",'C8'=>"", 'C9'=>"");
             $gradeLinha_2  = array($gradeColuna);
 
-            $gradeColuna = array('C1'=>"0",'C2'=>"0", 'C3'=>"0", 'C4'=>"0",'C5'=>"0", 'C6'=>"0", 'C7'=>"0",'C8'=>"0", 'C9'=>"0");
+            $gradeColuna = array('C1'=>"",'C2'=>"", 'C3'=>"", 'C4'=>"",'C5'=>"", 'C6'=>"", 'C7'=>"",'C8'=>"", 'C9'=>"");
             $gradeLinha_3  = array($gradeColuna);
 
-            $gradeColuna = array('C1'=>"0",'C2'=>"0", 'C3'=>"0", 'C4'=>"0",'C5'=>"0", 'C6'=>"0", 'C7'=>"0",'C8'=>"0", 'C9'=>"0");
+            $gradeColuna = array('C1'=>"",'C2'=>"", 'C3'=>"", 'C4'=>"",'C5'=>"", 'C6'=>"", 'C7'=>"",'C8'=>"", 'C9'=>"");
             $gradeLinha_4  = array($gradeColuna);
 
-            $gradeColuna = array('C1'=>"0",'C2'=>"0", 'C3'=>"0", 'C4'=>"0",'C5'=>"0", 'C6'=>"0", 'C7'=>"0",'C8'=>"0", 'C9'=>"0");
+            $gradeColuna = array('C1'=>"",'C2'=>"", 'C3'=>"", 'C4'=>"",'C5'=>"", 'C6'=>"", 'C7'=>"",'C8'=>"", 'C9'=>"");
             $gradeLinha_5  = array($gradeColuna);
 
-            $gradeColuna = array('C1'=>"0",'C2'=>"0", 'C3'=>"0", 'C4'=>"0",'C5'=>"0", 'C6'=>"0", 'C7'=>"0",'C8'=>"0", 'C9'=>"0");
+            $gradeColuna = array('C1'=>"",'C2'=>"", 'C3'=>"", 'C4'=>"",'C5'=>"", 'C6'=>"", 'C7'=>"",'C8'=>"", 'C9'=>"");
             $gradeLinha_6  = array($gradeColuna);
 
             
-            $gradeColuna = array('C1'=>"0",'C2'=>"0", 'C3'=>"0", 'C4'=>"0",'C5'=>"0", 'C6'=>"0", 'C7'=>"0",'C8'=>"0", 'C9'=>"0");
+            $gradeColuna = array('C1'=>"",'C2'=>"", 'C3'=>"", 'C4'=>"",'C5'=>"", 'C6'=>"", 'C7'=>"",'C8'=>"", 'C9'=>"");
             $gradeLinha_7  = array($gradeColuna);
 
-            $gradeColuna = array('C1'=>"0",'C2'=>"0", 'C3'=>"0", 'C4'=>"0",'C5'=>"0", 'C6'=>"0", 'C7'=>"0",'C8'=>"0", 'C9'=>"0");
+            $gradeColuna = array('C1'=>"",'C2'=>"", 'C3'=>"", 'C4'=>"",'C5'=>"", 'C6'=>"", 'C7'=>"",'C8'=>"", 'C9'=>"");
             $gradeLinha_8  = array($gradeColuna);
 
-            $gradeColuna = array('C1'=>"0",'C2'=>"0", 'C3'=>"0", 'C4'=>"0",'C5'=>"0", 'C6'=>"0", 'C7'=>"0",'C8'=>"0", 'C9'=>"0");
+            $gradeColuna = array('C1'=>"",'C2'=>"", 'C3'=>"", 'C4'=>"",'C5'=>"", 'C6'=>"", 'C7'=>"",'C8'=>"", 'C9'=>"");
             $gradeLinha_9  = array($gradeColuna);
            // */
             /*

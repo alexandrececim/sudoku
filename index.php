@@ -99,7 +99,7 @@ como avalição para uma vaga de programador PHP, portanto foi utilisado a estru
               gradeClicados.push($(this).attr('id'));
               digitosUsados++;
           }else{
-            $(this).val("0");
+            $(this).val("");
           }
           
         });

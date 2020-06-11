@@ -264,7 +264,7 @@
                 foreach($value as $coluna){
                     
                     $contaGrade++;
-                    echo "<tr class='status'>"."<td> <input type='texnumber' 
+                    echo "<tr class='status'>"."<td> <input type='number' 
                     value='".$coluna['C1']."' id='L".$contaGrade."C1' maxlength='1' class='grade'/></td>
 <td> <input type='number' value='".$coluna['C2']."' id='L".$contaGrade."C2' maxlength='1' class='grade'/></td>
 <td> <input type='number' value='".$coluna['C3']."' id='L".$contaGrade."C3' maxlength='1' class='grade'/></td>
